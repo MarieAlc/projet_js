@@ -17,7 +17,7 @@ let corbeille = []
 
 /* recuperer l'API'*/
 
-fetch('http://localhost:3000/todos')
+fetch("https://projet-js-chi.vercel.app/todos")
 
     /* récupération des données */
 
@@ -53,7 +53,7 @@ form.addEventListener("submit", (e) => {
             id: idTache,
             is_complete: false
         }
-        fetch("http://localhost:3000/todos", {
+        fetch("https://projet-js-chi.vercel.app/todos", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(nouvelleTache)
@@ -103,7 +103,7 @@ function afficherTache (texte,created_at,id, is_complete){
         if(tacheModifiee){
             tacheModifiee.is_complete = checkbox.checked
 
-            fetch(`http://localhost:3000/todos/${id}`, {
+            fetch(`https://projet-js-chi.vercel.app/todos${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(tacheModifiee),
@@ -154,7 +154,7 @@ function afficherTache (texte,created_at,id, is_complete){
     boutonSupprimer.className= "btn_supprimer"
 
     boutonSupprimer.addEventListener("click", ()=>{
-        fetch(`http://localhost:3000/todos/${id}`, {
+        fetch(`https://projet-js-chi.vercel.app/todos${id}`, {
         method: "DELETE"
     }).then(()=>{
         mettreAJourListes()
@@ -191,7 +191,7 @@ function afficherTache (texte,created_at,id, is_complete){
             boutonRestaurer.addEventListener("click", () => {
                 /* restaure la tache dans la liste principale */
                 toutesLesTaches.push(tache)
-                fetch("http://localhost:3000/todos", {
+                fetch("https://projet-js-chi.vercel.app/todos", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(tache)
