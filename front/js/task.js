@@ -17,7 +17,7 @@ let corbeille = []
 
 /* recuperer l'API'*/
 
-fetch("https://projet-js-chi.vercel.app/todos")
+fetch('http://localhost:3000/todos')
 
     /* récupération des données */
 
@@ -53,7 +53,7 @@ form.addEventListener("submit", (e) => {
             id: idTache,
             is_complete: false
         }
-        fetch("https://projet-js-chi.vercel.app/todos", {
+        fetch('http://localhost:3000/todos', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(nouvelleTache)
@@ -103,7 +103,7 @@ function afficherTache (texte,created_at,id, is_complete){
         if(tacheModifiee){
             tacheModifiee.is_complete = checkbox.checked
 
-            fetch(`https://projet-js-chi.vercel.app/todos${id}`, {
+            fetch(`http://localhost:3000/todos${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(tacheModifiee),
@@ -154,7 +154,7 @@ function afficherTache (texte,created_at,id, is_complete){
     boutonSupprimer.className= "btn_supprimer"
 
     boutonSupprimer.addEventListener("click", ()=>{
-        fetch(`https://projet-js-chi.vercel.app/todos${id}`, {
+        fetch(`http://localhost:3000/todos${id}`, {
         method: "DELETE"
     }).then(()=>{
         mettreAJourListes()
@@ -166,7 +166,7 @@ function afficherTache (texte,created_at,id, is_complete){
         /* pousse la tache suprimmer dans la corbeil */
        if (tacheSuprimmer) {
         corbeille.push(tacheSuprimmer)     
-       // fetch(`http://localhost:3000/todos/${id}`, { method: "DELETE" })  
+       
        }
        toutesLesTaches = toutesLesTaches.filter(t => t.id !== id)
 
@@ -191,7 +191,7 @@ function afficherTache (texte,created_at,id, is_complete){
             boutonRestaurer.addEventListener("click", () => {
                 /* restaure la tache dans la liste principale */
                 toutesLesTaches.push(tache)
-                fetch("https://projet-js-chi.vercel.app/todos", {
+                fetch('http://localhost:3000/todos', {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(tache)
