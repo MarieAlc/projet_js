@@ -1,5 +1,5 @@
 
-fetch('http://localhost:3000/todos')
+fetch('https://api-one-jade-90.vercel.app/todos')
     .then(response => response.json())
     .then(data => {
         const toutesLesTaches = data[0].todolist
@@ -18,7 +18,7 @@ fetch('http://localhost:3000/todos')
     google.charts.setOnLoadCallback(drawChart)
     
     function drawChart() {
-        fetch('http://localhost:3000/todos')
+        fetch('https://api-one-jade-90.vercel.app/todos')
             .then(response => response.json())
             .then(data => {
                 const toutesLesTaches = data[0].todolist
