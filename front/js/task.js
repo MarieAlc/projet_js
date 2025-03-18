@@ -17,7 +17,7 @@ let corbeille = []
 
 /* recuperer l'API'*/
 
-fetch('https://api-one-jade-90.vercel.app/todos')
+fetch("https://api-one-jade-90.vercel.app/todos")
 
     /* récupération des données */
 
