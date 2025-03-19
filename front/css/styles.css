@@ -11668,6 +11668,22 @@ li{
     flex-direction: column;
   }
 }
+@media (max-width: 450px){
+
+ #nav-petit{
+    justify-content: space-around;
+  }
+  .navbar-brand {
+     font-size: 15px;
+  }
+  #nouvelle-tache{
+      width: 300px;
+  }
+#tacheForm{
+  display: flex;
+}
+
+}
 @media (max-width: 320px){
   .app p{
     font-size:x-small;
