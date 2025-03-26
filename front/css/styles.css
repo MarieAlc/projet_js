@@ -11616,10 +11616,12 @@ li{
 
 #app{
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 
 }
+
 #app p{
   font-family: "Montserrat";
   font-size: large;

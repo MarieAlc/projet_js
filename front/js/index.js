@@ -1,24 +1,19 @@
-const form = document.getElementById("form")
-const prenomInput = document.getElementById("prenom")
+const form = document.getElementById("form");
+const prenomInput = document.getElementById("prenom");
 
-/* Empeche le rechargement et stock le prenom en local storage */
+/* Empêche le rechargement et stocke le prénom dans le localStorage */
+form.addEventListener("submit", (event) => {
+    /* Empêche le rechargement de la page après validation du formulaire */
+    event.preventDefault();
 
-form.addEventListener('submit', (event) =>{
+    /* .trim retire les espaces */
+    const prenom = prenomInput.value.trim();
 
-    /* empeche le rechargement de la page apres validation du form */
-
-    event.preventDefault()    
-
-    /* .trim retire les espace */ 
-
-    const prenom = prenomInput.value.trim()
-
-    if(!prenom){
-        alert ("Entrez votre prénom")
-    }else {
-            localStorage.setItem("prenom", prenom)
-            window.location.href="tasks.html"
-        }
-        /* stockage du prenom dans le localstorage */
-
-    })
+    if (!prenom) {
+        alert("Entrez votre prénom");
+    } else {
+        /* Stockage du prénom dans le localStorage */
+        localStorage.setItem("prenom", prenom);
+        window.location.href = "tasks.html";
+    }
+});
