@@ -4,9 +4,9 @@ Projet JS - ToDo List
  L'objectif de cette application est de permettre à l'utilisateur de gérer ses tâches quotidiennes en les ajoutant, modifiant, ou supprimant dans une interface simple et efficace.
  
  Liens
- Site Web : https://front-eight-umber.vercel.app/stat.html
+ Site Web : https://front-hj9dk8zmo-maries-projects-ee2ec7e7.vercel.app/
  
- API : https://api-one-jade-90.vercel.app/
+ API : https://api-one-jade-90.vercel.app/todos
  
  Technologies utilisées
  JavaScript : pour la logique de l'application
